@@ -1,4 +1,4 @@
-name: Deployment (Container)
+name: Deployment 2 (Container)
 on:
   push:
     branches:
@@ -14,14 +14,14 @@ jobs:
     container:
       image: node:16
     env:
-      MONGODB_CONNECTION_PROTOCOL: mongodb+srv
+      MONGODB_CONNECTION_PROTOCOL: mongodb
       MONGODB_CLUSTER_ADDRESS: mongodb
       MONGODB_USERNAME: root
       MONGODB_PASSWORD: example
       PORT: 8080
-    services:  # service containers
+    services:
       mongodb:
-        image: mongo  #name from dockerhub 
+        image: mongo
         env:
           MONGO_INITDB_ROOT_USERNAME: root
           MONGO_INITDB_ROOT_PASSWORD: example
